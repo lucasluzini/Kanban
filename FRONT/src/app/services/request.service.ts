@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class RequestService {
 
-  authorization: string = localStorage.getItem('auth') || '';
+  authorization: string = localStorage.getItem('token') || '';
   headers = {
     'Content-Type': 'application/json',
     Authorization: this.authorization,
@@ -29,15 +29,15 @@ export class RequestService {
     return response;
   }
 
-  setAuth(auth: string) {
-    this.authorization = 'Bearer ' + auth;
-    localStorage.setItem('auth', this.authorization);
+  setAuth(token: string) {
+    this.authorization = 'Bearer ' + token;
+    localStorage.setItem('token', this.authorization);
     this.isLogged.next(true);
   }
 
   clearAuth() {
     this.authorization = '';
-    localStorage.removeItem('auth');
+    localStorage.removeItem('token');
     this.isLogged.next(true);
   }
 
