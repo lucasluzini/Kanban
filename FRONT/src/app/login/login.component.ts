@@ -37,15 +37,15 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
-    this.reqService.getAuthorizationToken(this.requestLogin.login, this.requestLogin.senha).subscribe((token) => {
+    this.reqService.getToken(this.requestLogin.login, this.requestLogin.senha).subscribe((token) => {
         if (token) {
-          this.reqService.setAuth(token);
+          this.reqService.setToken(token);
           this.router.navigateByUrl('/cards');
           this.validLogin = false;
         } else {
           this.validLogin = true;
           this.loginForm.reset();
-          this.reqService.clearAuth();
+          this.reqService.clearToken();
         }
       });
   }

@@ -14,28 +14,27 @@ export class RequestService {
     Authorization: this.authorization,
   };
 
-  cardsChanged = new Subject();
   isLogged = new Subject();
 
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpRequest: HttpClient) {}
 
-  getAuthorizationToken(login: string, senha: string) {
+  getToken(login: string, senha: string) {
     const url = AppConstants.baseLogin;
     const msgBody = { login: login, senha: senha };
     const headers = { 'Content-Type': 'application/json' };
     const options = { headers: headers };
-    const response = this.httpClient.post<string>(url, msgBody, options);
+    const response = this.httpRequest.post<string>(url, msgBody, options);
     return response;
   }
 
-  setAuth(token: string) {
+  setToken(token: string) {
     this.authorization = 'Bearer ' + token;
     localStorage.setItem('token', this.authorization);
     this.isLogged.next(true);
   }
 
-  clearAuth() {
+  clearToken() {
     this.authorization = '';
     localStorage.removeItem('token');
     this.isLogged.next(true);
