@@ -20,7 +20,9 @@
                   <label class="form-label" for="password-input">Senha</label>
                 </div>
   
-                <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="login()">Login</button>
+                <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="onSubmit()">Login</button>
+                <br/><br/>
+                <label *ngIf="validLogin">Não autorizado</label>
  
               </div>
             </div>
