@@ -1,0 +1,136 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+
+# compiled output
+/FRONT/dist
+/FRONT/tmp
+/FRONT/out-tsc
+# Only exists if Bazel was run
+/FRONT/bazel-out
+
+# dependencies
+/FRONT/node_modules
+
+# profiling files
+/FRONT/chrome-profiler-events*.json
+
+# IDEs and editors
+/FRONT/.idea
+/FRONT/.project
+/FRONT/.classpath
+/FRONT/.c9/
+/FRONT/*.launch
+/FRONT/.settings/
+/FRONT/*.sublime-workspace
+
+# IDE - VSCode
+/FRONT/.vscode/*
+/FRONT/!.vscode/settings.json
+/FRONT/!.vscode/tasks.json
+/FRONT/!.vscode/launch.json
+/FRONT/!.vscode/extensions.json
+/FRONT/.history/*
+
+# misc
+/FRONT/.sass-cache
+/FRONT/connect.lock
+/FRONT/coverage
+/FRONT/libpeerconnection.log
+/FRONT/npm-debug.log
+/FRONT/yarn-error.log
+/FRONT/testem.log
+/FRONT/typings
+
+# System Files
+/FRONT/.DS_Store
+/FRONT/Thumbs.db
+
+
+
+# compiled output
+/BACK/dist
+/BACK/tmp
+/BACK/out-tsc
+# Only exists if Bazel was run
+/BACK/bazel-out
+
+# dependencies
+/BACK/node_modules
+
+# profiling files
+/BACK/chrome-profiler-events*.json
+
+# IDEs and editors
+/BACK/.idea
+/BACK/.project
+/BACK/.classpath
+/BACK/.c9/
+/BACK/*.launch
+/BACK/.settings/
+/BACK/*.sublime-workspace
+
+# IDE - VSCode
+/BACK/.vscode/*
+/BACK/!.vscode/settings.json
+/BACK/!.vscode/tasks.json
+/BACK/!.vscode/launch.json
+/BACK/!.vscode/extensions.json
+/BACK/.history/*
+
+# misc
+/BACK/.sass-cache
+/BACK/connect.lock
+/BACK/coverage
+/BACK/libpeerconnection.log
+/BACK/npm-debug.log
+/BACK/yarn-error.log
+/BACK/testem.log
+/BACK/typings
+
+# System Files
+/BACK/.DS_Store
+/BACK/Thumbs.db
