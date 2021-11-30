@@ -9,13 +9,8 @@ import { Subject } from 'rxjs';
 export class RequestService {
 
   authorization: string = localStorage.getItem('token') || '';
-  headers = {
-    'Content-Type': 'application/json',
-    Authorization: this.authorization,
-  };
 
   isLogged = new Subject();
-
 
   constructor(private httpRequest: HttpClient) {}
 
@@ -40,5 +35,16 @@ export class RequestService {
     this.isLogged.next(true);
   }
 
-  
+  loginRequestGetToken(requestLogin: any){
+    let headers: HttpHeaders = new HttpHeaders();
+
+    headers = headers.append('Content-Type', 'application/json');
+    headers = headers.append('Accept', 'application/json');
+    headers = headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5000/');
+    headers = headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    headers = headers.append('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    const response = this.httpRequest.post<string>(AppConstants.baseLogin, JSON.stringify(requestLogin), {headers: headers});
+    return response;
+  }
 }
